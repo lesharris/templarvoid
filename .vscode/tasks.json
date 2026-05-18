@@ -5,10 +5,7 @@
       "label": "vp: check",
       "type": "shell",
       "command": "vp check",
-      "group": {
-        "kind": "test",
-        "isDefault": true
-      },
+      "group": "build",
       "problemMatcher": {
         "owner": "vp",
         "source": "vp",
@@ -61,7 +58,10 @@
       "label": "vp: build",
       "type": "shell",
       "command": "vp build",
-      "group": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
       "problemMatcher": {
         "owner": "vp",
         "source": "vp",
