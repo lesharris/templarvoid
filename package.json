@@ -9,19 +9,15 @@
     "prepare": "vp config"
   },
   "dependencies": {
-    "hono": "^4.11.9",
-    "vue": "^3.5.30"
+    "hono": "^4.12.19",
+    "vue": "^3.5.34"
   },
   "devDependencies": {
     "@void/vue": "0.7.12",
     "typescript": "^5.9.3",
-    "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+    "vite": "npm:@voidzero-dev/vite-plus-core@^0.1.21",
     "vite-plus": "latest",
     "void": "0.7.12"
   },
-  "overrides": {
-    "vite": "npm:@voidzero-dev/vite-plus-core@latest",
-    "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
-  },
-  "packageManager": "npm@11.14.1"
+  "packageManager": "pnpm@11.1.2"
 }
