@@ -6,53 +6,136 @@
       "type": "shell",
       "command": "vp check",
       "group": "build",
-      "problemMatcher": {
-        "owner": "vp",
-        "source": "vp",
-        "fileLocation": ["relative", "${workspaceFolder}"],
-        "pattern": [
-          {
-            "regexp": "^x\\s+([^\\(]+)\\(([^\\)]+)\\):\\s+(.*)$",
-            "code": 2,
-            "message": 3
-          },
-          {
-            "regexp": "^\\s*,?-\\[([^:]+):(\\d+):(\\d+)\\]",
-            "file": 1,
-            "line": 2,
-            "column": 3
-          }
-        ]
-      }
+      "problemMatcher": [
+        {
+          "owner": "vp",
+          "source": "vp",
+          "fileLocation": ["relative", "${workspaceFolder}"],
+          "pattern": [
+            {
+              "regexp": "^x\\s+([^\\(]+)\\(([^\\)]+)\\):\\s+(.*)$",
+              "code": 2,
+              "message": 3
+            },
+            {
+              "regexp": "^\\s*,?-\\[([^:]+):(\\d+):(\\d+)\\]",
+              "file": 1,
+              "line": 2,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "owner": "vp",
+          "source": "vite",
+          "fileLocation": ["relative", "${workspaceFolder}"],
+          "pattern": [
+            {
+              "regexp": "^.*\\[([A-Z_]+)\\]\\s+Error:\\s+(.*)$",
+              "code": 1,
+              "message": 2
+            },
+            {
+              "regexp": "^.*\\[\\s*([^:\\]]+):(\\d+):(\\d+)\\s*\\].*$",
+              "file": 1,
+              "line": 2,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "owner": "vp",
+          "source": "vite",
+          "fileLocation": "absolute",
+          "pattern": [
+            {
+              "regexp": "^.*\\[vue/compiler-sfc\\]\\s+(.*)\\s+\\((\\d+):\\d+\\).*$",
+              "message": 1,
+              "line": 2
+            },
+            {
+              "regexp": "^\\s*$"
+            },
+            {
+              "regexp": "^.*?(/.*\\.vue).*$",
+              "file": 1
+            }
+          ]
+        }
+      ]
     },
     {
       "label": "vp: dev",
       "type": "shell",
       "command": "vp dev",
       "isBackground": true,
-      "problemMatcher": {
-        "owner": "vp",
-        "source": "vp",
-        "fileLocation": ["relative", "${workspaceFolder}"],
-        "pattern": [
-          {
-            "regexp": "^x\\s+([^\\(]+)\\(([^\\)]+)\\):\\s+(.*)$",
-            "code": 2,
-            "message": 3
-          },
-          {
-            "regexp": "^\\s*,?-\\[([^:]+):(\\d+):(\\d+)\\]",
-            "file": 1,
-            "line": 2,
-            "column": 3
+      "problemMatcher": [
+        {
+          "owner": "vp",
+          "source": "vp",
+          "fileLocation": ["relative", "${workspaceFolder}"],
+          "pattern": [
+            {
+              "regexp": "^x\\s+([^\\(]+)\\(([^\\)]+)\\):\\s+(.*)$",
+              "code": 2,
+              "message": 3
+            },
+            {
+              "regexp": "^\\s*,?-\\[([^:]+):(\\d+):(\\d+)\\]",
+              "file": 1,
+              "line": 2,
+              "column": 3
+            }
+          ],
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "^.*VITE\\+ v",
+            "endsPattern": "^\\s*➜\\s+Local:\\s+http://"
           }
-        ],
-        "background": {
-          "activeOnStart": true,
-          "beginsPattern": "^.*VITE\\+ v",
-          "endsPattern": "^\\s*➜\\s+Local:\\s+http://"
+        },
+        {
+          "owner": "vp",
+          "source": "vite",
+          "fileLocation": ["relative", "${workspaceFolder}"],
+          "pattern": [
+            {
+              "regexp": "^.*\\[([A-Z_]+)\\]\\s+Error:\\s+(.*)$",
+              "code": 1,
+              "message": 2
+            },
+            {
+              "regexp": "^.*\\[\\s*([^:\\]]+):(\\d+):(\\d+)\\s*\\].*$",
+              "file": 1,
+              "line": 2,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "owner": "vp",
+          "source": "vite",
+          "fileLocation": "absolute",
+          "pattern": [
+            {
+              "regexp": "^.*\\[vue/compiler-sfc\\]\\s+(.*)\\s+\\((\\d+):\\d+\\).*$",
+              "message": 1,
+              "line": 2
+            },
+            {
+              "regexp": "^\\s*$"
+            },
+            {
+              "regexp": "^.*?(/.*\\.vue).*$",
+              "file": 1
+            }
+          ],
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "^.*VITE\\+ v",
+            "endsPattern": "^\\s*➜\\s+Local:\\s+http://"
+          }
         }
-      }
+      ]
     },
     {
       "label": "vp: build",
@@ -62,24 +145,63 @@
         "kind": "build",
         "isDefault": true
       },
-      "problemMatcher": {
-        "owner": "vp",
-        "source": "vp",
-        "fileLocation": ["relative", "${workspaceFolder}"],
-        "pattern": [
-          {
-            "regexp": "^x\\s+([^\\(]+)\\(([^\\)]+)\\):\\s+(.*)$",
-            "code": 2,
-            "message": 3
-          },
-          {
-            "regexp": "^\\s*,?-\\[([^:]+):(\\d+):(\\d+)\\]",
-            "file": 1,
-            "line": 2,
-            "column": 3
-          }
-        ]
-      }
+      "problemMatcher": [
+        {
+          "owner": "vp",
+          "source": "vp",
+          "fileLocation": ["relative", "${workspaceFolder}"],
+          "pattern": [
+            {
+              "regexp": "^x\\s+([^\\(]+)\\(([^\\)]+)\\):\\s+(.*)$",
+              "code": 2,
+              "message": 3
+            },
+            {
+              "regexp": "^\\s*,?-\\[([^:]+):(\\d+):(\\d+)\\]",
+              "file": 1,
+              "line": 2,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "owner": "vp",
+          "source": "vite",
+          "fileLocation": ["relative", "${workspaceFolder}"],
+          "pattern": [
+            {
+              "regexp": "^.*\\[([A-Z_]+)\\]\\s+Error:\\s+(.*)$",
+              "code": 1,
+              "message": 2
+            },
+            {
+              "regexp": "^.*\\[\\s*([^:\\]]+):(\\d+):(\\d+)\\s*\\].*$",
+              "file": 1,
+              "line": 2,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "owner": "vp",
+          "source": "vite",
+          "fileLocation": "absolute",
+          "pattern": [
+            {
+              "regexp": "^.*\\[vue/compiler-sfc\\]\\s+(.*)\\s+\\((\\d+):\\d+\\).*$",
+              "message": 1,
+              "line": 2
+            },
+            {
+              "regexp": "^\\s*$"
+            },
+            {
+              "regexp": "^.*?(/.*\\.vue).*$",
+              "file": 1
+            }
+          ]
+        }
+      ]
     }
   ]
 }
