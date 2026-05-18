@@ -3,18 +3,25 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "vp dev",
+    "build": "vp build",
+    "preview": "vp preview",
+    "prepare": "vp config"
   },
   "dependencies": {
     "hono": "^4.11.9",
     "vue": "^3.5.30"
   },
   "devDependencies": {
-    "void": "0.7.12",
-    "vite": "^8.0.10",
+    "@void/vue": "0.7.12",
     "typescript": "^5.9.3",
-    "@void/vue": "0.7.12"
-  }
+    "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+    "vite-plus": "latest",
+    "void": "0.7.12"
+  },
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+    "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
+  },
+  "packageManager": "npm@11.14.1"
 }
