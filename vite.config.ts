@@ -14,5 +14,5 @@ export default defineConfig({
     semi: false,
   },
   lint: { options: { typeAware: true, typeCheck: true } },
-  plugins: [...voidPlugin(), ...voidVue()],
+  plugins: [voidPlugin(), voidVue()],
 })
