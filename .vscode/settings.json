@@ -12,6 +12,9 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "oxc.oxc-vscode"
   },
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
   "oxc.fmt.configPath": "./vite.config.ts",
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
